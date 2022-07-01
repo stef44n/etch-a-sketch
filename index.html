@@ -16,18 +16,23 @@
     <script>
 
         const container = document.getElementById('container');
-        // const square = document.createElement('div');
-        // square.className = 'cell';
-        // container.append(square);
+        // const rows = document.createElement('div');
+        // rows.className = 'rows';
+        // container.append(rows);
 
         let num = 16;
 
         function createGrid(num) {
-            for (let cells = 0; cells < num; cells++) {
+            for (let rows = 0; rows < num; rows++) {
                 //const container = document.getElementById('container');
-                const square = document.createElement('div');
-                square.className = 'cell';
-                container.append(square);
+                const rows = document.createElement('div');
+                rows.className = 'rows';
+                container.append(rows);
+                for (let cells = 0; cells < num; cells++) {
+                    const square = document.createElement('div');
+                    square.className = 'cell';
+                    rows.append(square);
+                }
 
             }
         };
