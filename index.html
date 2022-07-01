@@ -16,9 +16,23 @@
     <script>
 
         const container = document.getElementById('container');
-        const square = document.createElement('div');
-        square.className = 'cell';
-        container.append(square);
+        // const square = document.createElement('div');
+        // square.className = 'cell';
+        // container.append(square);
+
+        let num = 16;
+
+        function createGrid(num) {
+            for (let cells = 0; cells < num; cells++) {
+                //const container = document.getElementById('container');
+                const square = document.createElement('div');
+                square.className = 'cell';
+                container.append(square);
+
+            }
+        };
+
+        createGrid(num);
 
     </script>
 </body>
