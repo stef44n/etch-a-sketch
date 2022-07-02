@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div>
+        <button id="replay">NEW GRID</button>
+    </div>
     <div id="container">
         
     </div>
@@ -45,9 +47,39 @@
                 }
             }
 
+            let elements = document.querySelectorAll('.cell');
+            elements.forEach(element => {
+                element.style.padding = `${700/(2*num)}px`;
+            });
+
         };
 
         createGrid(num);
+
+
+        // let elements = document.querySelectorAll('.cell');
+        //     elements.forEach(element => {
+        //     element.style.padding = `${700/(2*num)}px`;
+        // });
+
+        function newGame() {
+            let userInput = parseInt(prompt('New grid size:', 'Enter a number from 1 to 100'));
+            //num = userInput;
+            //document.getElementById('#container').innerHTML = '';
+            if (userInput > 0 && userInput < 101) {
+                document.getElementById('#container').innerHTML = createGrid(userInput);
+            };
+        };
+
+        function deleteDiv() {
+            document.getElementById('container').innerHTML = '';
+        }
+
+        const resetGrid = document.querySelector('button');
+        resetGrid.addEventListener('click', () => {
+            deleteDiv();
+            newGame();
+        });
 
     </script>
 </body>
