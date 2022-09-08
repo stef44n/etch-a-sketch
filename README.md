@@ -10,6 +10,7 @@ The aim of the assignment was to create an online sketchpad similar to an `etch-
 
 * Learn more advanced DOM manipulation
 * Create the grid (i.e. HTML elements) using functions
+* Change cell colour on hover
 * Adjust the cell sizes dynamically based on number of squares in the grid (e.g. 24x24)
 * Reset the grid and start anew
 
